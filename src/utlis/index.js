@@ -26,6 +26,11 @@ const addFavorite = (coffee) => {
     localStorage.setItem('favorits', JSON.stringify(favorits))
 }
 
+const removeFavorite = (id) => {
+    const favorits = getAllFavorite();
+    const ramaning = favorits.filter(coffee =>coffee.id != id )
+    localStorage.setItem('favorits', JSON.stringify(ramaning))
 
+}
 
 export { addFavorite, getAllFavorite };
