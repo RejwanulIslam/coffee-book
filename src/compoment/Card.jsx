@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { MdDelete } from "react-icons/md";
 
-export default function Card({ coffee }) {
+export default function Card({ coffee ,handleremove }) {
 
   const { pathname } = useLocation()
   const { id, image, rating, popularity, category, type, ingredients, nutrition_info, calories, fat, carbohydrates, protein, name } = coffee
@@ -23,7 +23,7 @@ export default function Card({ coffee }) {
             </div>
           </Link>
           {
-            pathname === '/dashbord' &&  <div className='absolute -top-5 -right-5'><MdDelete ></MdDelete> </div> 
+            pathname === '/dashbord' &&  <div onClick={()=>handleremove(id)} className='absolute -top-5 -right-5'><MdDelete ></MdDelete> </div> 
           }
         </div>
 

@@ -33,4 +33,4 @@ const removeFavorite = (id) => {
 
 }
 
-export { addFavorite, getAllFavorite };
+export { addFavorite, getAllFavorite,removeFavorite };

@@ -15,6 +15,7 @@ export default function CoffeeDetails() {
 
 
   }
+
   const [isFavorite, setisFavorite] = useState(false)
 
   useEffect(
